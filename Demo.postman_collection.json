@@ -1,0 +1,409 @@
+{
+	"info": {
+		"_postman_id": "3d31fdc2-779c-48b9-972c-b4519dbc46ad",
+		"name": "Demo",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "19906057"
+	},
+	"item": [
+		{
+			"name": "Loan",
+			"item": [
+				{
+					"name": "Get Loans",
+					"request": {
+						"auth": {
+							"type": "basic",
+							"basic": [
+								{
+									"key": "password",
+									"value": "officer",
+									"type": "string"
+								},
+								{
+									"key": "username",
+									"value": "officer",
+									"type": "string"
+								}
+							]
+						},
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "localhost:8081/loan",
+							"host": [
+								"localhost"
+							],
+							"port": "8081",
+							"path": [
+								"loan"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Get Loan by id",
+					"request": {
+						"auth": {
+							"type": "basic",
+							"basic": [
+								{
+									"key": "password",
+									"value": "officer",
+									"type": "string"
+								},
+								{
+									"key": "username",
+									"value": "officer",
+									"type": "string"
+								}
+							]
+						},
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "localhost:8081/loan/2",
+							"host": [
+								"localhost"
+							],
+							"port": "8081",
+							"path": [
+								"loan",
+								"2"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Post Loan",
+					"request": {
+						"auth": {
+							"type": "basic",
+							"basic": [
+								{
+									"key": "password",
+									"value": "officer",
+									"type": "string"
+								},
+								{
+									"key": "username",
+									"value": "officer",
+									"type": "string"
+								}
+							]
+						},
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n        \"loanName\": \"B\",\r\n        \"loanAmt\": 100000.0,\r\n        \"loanType\": \"HOME\",\r\n        \"duration\": 20,\r\n        \"monthlyEMI\": 15000.0\r\n    }",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "localhost:8081/loan",
+							"host": [
+								"localhost"
+							],
+							"port": "8081",
+							"path": [
+								"loan"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Put Loan by id",
+					"request": {
+						"auth": {
+							"type": "basic",
+							"basic": [
+								{
+									"key": "password",
+									"value": "officer",
+									"type": "string"
+								},
+								{
+									"key": "username",
+									"value": "officer",
+									"type": "string"
+								}
+							]
+						},
+						"method": "PUT",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n        \"loanName\": \"B\",\r\n        \"loanAmt\": 200000.0,\r\n        \"loanType\": \"HOME\",\r\n        \"duration\": 20,\r\n        \"monthlyEMI\": 15000.0\r\n    }",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "localhost:8081/loan/28",
+							"host": [
+								"localhost"
+							],
+							"port": "8081",
+							"path": [
+								"loan",
+								"28"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Delete by id",
+					"request": {
+						"auth": {
+							"type": "basic",
+							"basic": [
+								{
+									"key": "password",
+									"value": "officer",
+									"type": "string"
+								},
+								{
+									"key": "username",
+									"value": "officer",
+									"type": "string"
+								}
+							]
+						},
+						"method": "DELETE",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n        \"loanName\": \"B\",\r\n        \"loanAmt\": 200000.0,\r\n        \"loanType\": \"HOME\",\r\n        \"duration\": 20,\r\n        \"monthlyEMI\": 15000.0\r\n    }",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "localhost:8081/loan/28",
+							"host": [
+								"localhost"
+							],
+							"port": "8081",
+							"path": [
+								"loan",
+								"28"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "Loan Application",
+			"item": [
+				{
+					"name": "Create Loan application",
+					"request": {
+						"auth": {
+							"type": "basic",
+							"basic": [
+								{
+									"key": "password",
+									"value": "customer",
+									"type": "string"
+								},
+								{
+									"key": "username",
+									"value": "customer",
+									"type": "string"
+								}
+							]
+						},
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n       \r\n        \"loanId\": 2,\r\n        \"customerId\": 1\r\n    }",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "localhost:8081/api/v1/loan/apply",
+							"host": [
+								"localhost"
+							],
+							"port": "8081",
+							"path": [
+								"api",
+								"v1",
+								"loan",
+								"apply"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Get Loan applications by customer id",
+					"request": {
+						"auth": {
+							"type": "basic",
+							"basic": [
+								{
+									"key": "password",
+									"value": "customer",
+									"type": "string"
+								},
+								{
+									"key": "username",
+									"value": "customer",
+									"type": "string"
+								}
+							]
+						},
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "localhost:8081/api/v1/loan/1",
+							"host": [
+								"localhost"
+							],
+							"port": "8081",
+							"path": [
+								"api",
+								"v1",
+								"loan",
+								"1"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "Loan Validation",
+			"item": [
+				{
+					"name": "Get Loan Applications",
+					"request": {
+						"auth": {
+							"type": "basic",
+							"basic": [
+								{
+									"key": "password",
+									"value": "officer",
+									"type": "string"
+								},
+								{
+									"key": "username",
+									"value": "officer",
+									"type": "string"
+								}
+							]
+						},
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "localhost:8081/api/v1/application",
+							"host": [
+								"localhost"
+							],
+							"port": "8081",
+							"path": [
+								"api",
+								"v1",
+								"application"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Get Loan Application to be validate",
+					"request": {
+						"auth": {
+							"type": "basic",
+							"basic": [
+								{
+									"key": "password",
+									"value": "officer",
+									"type": "string"
+								},
+								{
+									"key": "username",
+									"value": "officer",
+									"type": "string"
+								}
+							]
+						},
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "localhost:8081/api/v1/application/new",
+							"host": [
+								"localhost"
+							],
+							"port": "8081",
+							"path": [
+								"api",
+								"v1",
+								"application",
+								"new"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Get Loan Application to be validate",
+					"request": {
+						"auth": {
+							"type": "basic",
+							"basic": [
+								{
+									"key": "password",
+									"value": "officer",
+									"type": "string"
+								},
+								{
+									"key": "username",
+									"value": "officer",
+									"type": "string"
+								}
+							]
+						},
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "localhost:8081/api/v1/application/29/validate",
+							"host": [
+								"localhost"
+							],
+							"port": "8081",
+							"path": [
+								"api",
+								"v1",
+								"application",
+								"29",
+								"validate"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		}
+	]
+}

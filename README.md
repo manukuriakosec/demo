@@ -8,3 +8,5 @@ Officer can create/update/delete loan and validate customer loan request(Approve
 Following are the screen shoot of each end points
 
 
+
+
